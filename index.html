@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>Website</title>
+    <link rel="stylesheet" href = "main.css">
+</head>
+<body onload="startFunc()">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src ="script.js"></script>
+
+<header>
+    <div id = "page-header">
+        <p class="head">Кирса Кирилл P3210 </p>
+        <p class="head"> Вариант 2106 </p>
+    </div>
+</header>
+
+
+
+            <div id="sidebar" class="bordered">
+                <h3>Условия:</h3>
+                <ul>
+                    <li>Для расположения текстовых и графических элементов необходимо использовать блочную верстку.</li>
+                    <li>Данные формы должны передаваться на обработку посредством GET-запроса.</li>
+                    <li>Таблицы стилей должны располагаться в отдельных файлах.</li>
+                    <li>При работе с CSS должно быть продемонстрировано использование селекторов идентификаторов, селекторов дочерних элементов, селекторов классов, селекторов потомств а также такие свойства стилей CSS, как наследование и каскадирование.</li>
+                    <li>HTML-страница должна иметь "шапку", содержащую ФИО студента, номер группы и новер варианта. При оформлении шапки необходимо явным образом задать шрифт (monospace), его цвет и размер в каскадной таблице стилей.</li>
+                    <li>Отступы элементов ввода должны задаваться в процентах.</li>
+                    <li>Страница должна содержать сценарий на языке JavaScript, осуществляющий валидацию значений, вводимых пользователем в поля формы. Любые некорректные значения (например, буквы в координатах точки или отрицательный радиус) должны блокироваться.</li>
+                </ul>
+                <img src="areas.png">
+            </div>
+
+
+
+
+            <div id="main" class="bordered">
+
+                <form id = "actionPanel">
+
+                    <div id="panelX">
+                        <p class="label">Выбор X</p>
+                        <div id="selectX">
+                            <input type="radio" id="X0" name="xRadio" value="-4">-4
+                            <input type="radio" id="X1" name="xRadio" value="-3">-3
+                            <input type="radio" id="X2" name="xRadio" value="-2">-2
+                            <input type="radio" id="X3" name="xRadio" value="-1">-1
+                            <input type="radio" id="X4" name="xRadio" value="0">0
+                            <input type="radio" id="X5" name="xRadio" value="1">1
+                            <input type="radio" id="X6" name="xRadio" value="2">2
+                            <input type="radio" id="X7" name="xRadio" value="3">3
+                            <input type="radio" id="X8" name="xRadio" value="4">4
+
+                        </div>
+                    </div>
+
+
+                    <div id="panelY">
+                        <p class="label">Выбор Y</p>
+                        <div id="selectY">
+                            <input type="text" name="yGroup" id="yText" placeholder="Введите число от -5 до 5">
+                        </div>
+                    </div>
+
+                    <div id="panelR">
+                        <p class="label" >Выбор R</p>
+                        <div id="selectR">
+                            <input id="rBox1" type="checkbox" name="rBox" value="1"> 1
+                            <input id="rBox2" type="checkbox" name="rBox" value="1.5"> 1.5
+                            <input id="rBox3" type="checkbox" name="rBox" value="2"> 2
+                            <input id="rBox4" type="checkbox" name="rBox" value="2.5"> 2.5
+                            <input id="rBox5" type="checkbox" name="rBox" value="3"> 3
+                        </div>
+                    </div>
+
+                    <input type="button" id="mainButton" value="Проверка" onclick="sendRequest()">
+
+                    <input type="submit" id="clearButton" value="Очистить" onclick="clearRows()">
+
+                </form>
+                <p></p>
+                <div id="resultField">
+                    <table id="resultTable">
+                        <tr>
+                            <th id="xColumn">X</th>
+                            <th id="yColumn">Y</th>
+                            <th id="rColumn">R</th>
+                            <th id="currentTime">Текущее время</th>
+                            <th id="executionTime">Время работы</th>
+                            <th id="resultColumn">Результат</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+</body>
+</html>
